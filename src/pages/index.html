@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../assets/icons/pizza.png" type="image/x-icon">
+   <link rel="stylesheet" href="../public/styles.css">
+   <title>Pizza Restaurant</title>
+</head>
+
+<body class="font-Josefin overflow-x-hidden w-full">
+   <!-- Header -->
+   <header class="font-Ysabeau overflow-hidden relative w-screen h-[590px] bg-gradient-to-br from-black/20 to-black/80">
+
+      <img class="fixed rotate-180 -z-10 w-full h-full object-cover object-right top-0 left-0"
+         src="../assets/bg/pizza-bg.jpg" alt="background">
+      <!-- nav bar -->
+      <nav class="relative flex justify-between items-center px-8 pt-4 ">
+         <a href="index.html" class="group w-fit flex items-center space-x-2">
+            <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
+            <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
+         </a>
+
+         <svg id="burger-menu" role="button" aria-label="open links menu" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-12 h-12 rotate-180 fill-none stroke-white hover:stroke-white/60 duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+         </svg>
+
+         <svg id="close-menu" class="hidden w-12 h-12 fill-none stroke-white hover:stroke-white/60 duration-300"
+            role="button" aria-label="close links menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+         </svg>
+
+         <ul id="links-menu"
+            class="absolute translate-x-full duration-500 right-0 top-full w-56 h-56 flex flex-col justify-around overflow-hidden rounded-l-lg bg-black/50 text-white border border-r-0 border-white/20"
+            role="navigation" aria-label="links">
+            <!-- home -->
+            <a href="index.html" aria-labelledby="home" class="link-item">
+               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+               </svg>
+               <span id="home">home</span>
+            </a>
+
+            <!-- about -->
+            <a href="about.html" aria-labelledby="about" class="link-item">
+               <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+               </svg>
+               <span id="about">about</span>
+            </a>
+
+            <!-- contact -->
+            <a href="contact.html" aria-labelledby="contact" class="link-item">
+               <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+               </svg>
+               <span id="contact">contact us</span>
+            </a>
+         </ul>
+      </nav>
+
+
+      <!-- Presentations -->
+      <section id="carousel" class="relative md:w-96 h-fit mt-28 ml-12 md:ml-24">
+         <div aria-labelledby="title1" class="absolute top-0 left-0 opacity-100 duration-1000">
+            <h1 id="title1" class="text-green-600 font-bold text-6xl italic capitalize">delicious pizzas</h1>
+            <p class="text-white font-medium mt-4 text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+               Molestias, repellendus rem.</p>
+         </div>
+
+         <div aria-labelledby="title2" class="absolute top-0 left-0 invisible opacity-0 duration-1000">
+            <h1 id="title2" class="text-green-600 font-bold text-6xl italic capitalize">Delivery speed</h1>
+            <p class="text-white font-medium mt-4 text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+               Praesentium rem quas alias.</p>
+         </div>
+
+         <div aria-labelledby="title3" class="absolute top-0 left-0 invisible opacity-0 duration-1000">
+            <h1 id="title3" class="text-green-600 font-bold text-6xl italic capitalize">high rating</h1>
+            <p class="text-white font-medium mt-4 text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+               Voluptatem, laudantium?</p>
+         </div>
+
+      </section>
+
+      <div id="carousel-btn" class="z-10 absolute bottom-12 left-1/2 -translate-x-1/2 w-fit flex space-x-4">
+         <button
+            class="w-3 h-3 rounded-full outline outline-2 outline-offset-1 outline-white/50 duration-1000 bg-white"></button>
+         <button
+            class="w-3 h-3 rounded-full outline outline-2 outline-offset-1 outline-white/50 duration-1000"></button>
+         <button
+            class="w-3 h-3 rounded-full outline outline-2 outline-offset-1 outline-white/50 duration-1000"></button>
+      </div>
+
+      <svg role="img" aria-label="background" class="w-full h-[139px] rotate-180 absolute -bottom-12 left-0"
+         xmlns="http://www.w3.org/2000/svg">
+         <defs>
+            <path id="a" d="M0 0h1440v139H0z" />
+         </defs>
+         <g fill="none" fill-rule="evenodd">
+            <mask id="b" fill="white">
+               <use xlink:href="#a" />
+            </mask>
+            <g mask="url(#b)">
+               <path
+                  d="M0-574.4c152.937-85.68 298.933-101.818 437.988-48.413 208.583 80.107 457.536 53.405 594.167 0 136.63-53.405 140.541-118.522 407.845-48.963 267.304 69.56 0 698.192 0 698.192s-211.887 128.179-591.858 64.09C594.828 47.779 312.114 63.996 0 139.156V-574.4z"
+                  fill="#ffa231" />
+               <path d="M750-537h560V23H750z" />
+            </g>
+         </g>
+      </svg>
+   </header>
+
+   <main class="bg-white w-screen">
+      <section aria-label="ads"
+         class="relative px-12 py-3 md:py-0 md:px-24 text-center flex flex-wrap space-x-12 items-center justify-center bg-[#ffa231]">
+         <img class="w-72 md:w-80 animate-wiggle " src="../assets/imgs/freehomedelivery.png" alt="freehomedelivery">
+
+         <div>
+            <h2 class="text-2xl mb-8 font-extrabold uppercase animate-pulse">Take advantage before 🥳️
+            </h2>
+            <span class="text-2xl font-bold text-white mr-2 border-2 border-gray-800/50 border-dashed p-2">01</span>
+            -&nbsp;&nbsp;
+            <span class="text-2xl font-bold text-white mr-2 border-2 border-gray-800/50 border-dashed p-2">08</span>
+            -&nbsp;&nbsp;
+            <span class="text-2xl font-bold text-white border-2 border-gray-800/50 border-dashed p-2">2023</span>
+
+         </div>
+
+         <svg role="img" aria-label="background" class="w-screen h-[139px] absolute top-full -left-12"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+               <path id="a" d="M0 0h1440v139H0z" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+               <mask id="b" fill="white">
+                  <use xlink:href="#a" />
+               </mask>
+               <g mask="url(#b)">
+                  <path
+                     d="M0-574.4c152.937-85.68 298.933-101.818 437.988-48.413 208.583 80.107 457.536 53.405 594.167 0 136.63-53.405 140.541-118.522 407.845-48.963 267.304 69.56 0 698.192 0 698.192s-211.887 128.179-591.858 64.09C594.828 47.779 312.114 63.996 0 139.156V-574.4z"
+                     fill="#ffa231" />
+                  <path d="M750-537h560V23H750z" />
+               </g>
+            </g>
+         </svg>
+      </section>
+
+      <section class="mt-44">
+         <h1 class="ml-24 capitalize text-4xl font-bold">explore our pizzas</h1>
+         <div
+            class="w-full gap-8 place-items-start grid md:grid-cols-2 lg:grid-cols-3 place-content-center px-8 md:px-24 py-12">
+
+            <div class="rounded-b-xl shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/chicago-pizza.jpg" alt="chicago-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza1" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza1"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     chicago
+                     pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$12.50</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path style="fill-rule:evenodd"
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="rounded-b-xl shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/bagel-pizza.jpg" alt="bagel-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza2" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza2"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     bagel
+                     pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$15.00</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path style="fill-rule:evenodd"
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="8" class="w-4 h-4 fill-orange-600 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="rounded-b-xl  shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/greek-pizza.jpg" alt="greek-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza3" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza3"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     greek pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$19.50</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path style="fill-rule:evenodd"
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="rounded-b-xl  shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/thick-crusts-pizza.jpg" alt="thick-crusts-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza4" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza4"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     thick crusts pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$21.00</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="8" class="w-4 h-4 fill-orange-600 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+
+                           </g>
+                        </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="rounded-b-xl  shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/sicilian-pizza.jpg" alt="sicilian-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza6" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza6"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     sicilian pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$25.00</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="rounded-b-xl  shadow-lg shadow-orange-900">
+               <img src="../assets/imgs/pan-pizza.jpg" alt="pan-pizza"
+                  class="w-full h-56 object-cover object-center rounded-t-xl">
+               <div aria-labelledby="pizza5" class="bg-orange-600 p-4 flex justify-between items-start rounded-b-xl">
+                  <h3 id="pizza5"
+                     class="text-xl font-medium text-white capitalize hover:text-black/80 duration-200 cursor-pointer">
+                     pan pizza</h3>
+                  <div>
+                     <p class="text-white text-lg font-bold text-end">$11.00</p>
+                     <div class="flex space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="1.5" class="w-4 h-4 fill-yellow-500 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 123.38 117.69"
+                           xml:space="preserve" stroke-width="8" class="w-4 h-4 fill-orange-600 stroke-yellow-500">
+                           <g>
+                              <path
+                                 d="M64.64,2.22l15.71,36.79l39.85,3.58c1.76,0.15,3.06,1.7,2.91,3.46c-0.07,0.86-0.48,1.6-1.08,2.13L91.89,74.5 l8.92,39.02c0.39,1.72-0.68,3.44-2.41,3.84c-0.88,0.2-1.76,0.02-2.47-0.44L61.69,96.44l-34.35,20.54c-1.52,0.91-3.48,0.41-4.39-1.1 c-0.44-0.74-0.55-1.58-0.37-2.35l0,0l8.92-39.02L1.34,48.17c-1.33-1.16-1.46-3.18-0.3-4.51c0.59-0.68,1.4-1.04,2.24-1.09 l39.75-3.57L58.75,2.2c0.69-1.63,2.57-2.38,4.2-1.69C63.74,0.85,64.33,1.48,64.64,2.22L64.64,2.22z M61.69,11.6l13.53,31.67l0.01,0 c0.45,1.05,1.45,1.83,2.67,1.93l34.31,3.08L86.37,70.83c-0.95,0.74-1.44,1.99-1.15,3.24l7.68,33.58L63.39,90 c-0.51-0.32-1.1-0.49-1.7-0.49V11.6L61.69,11.6z" />
+                           </g>
+                        </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer class="relative bg-black pt-24 mt-44">
+
+         <form
+            class="absolute bg-gradient-to-tl from-[#ffa231] to-orange-800 p-4 rounded-lg w-11/12 md:w-[400px] h-36 top-0 left-1/2 -translate-y-1/2 -translate-x-1/2">
+            <label for="email" class="text-white font-medium text-2xl capitalize">recieve <br /> our offers!</label>
+            <input type="text" id="email" placeholder="example@mail.com"
+               class="outline-none shadow-lg shadow-black/50 w-[70%] md:w-[78%] rounded-lg mt-3 py-1 px-4 border-2 border-transparent focus:border-[#ffa231]" />
+            <button
+               class="capitalize text-white py-1 px-3 rounded-lg w-fit text-center bg-orange-700 shadow-lg shadow-black/50 hover:duration-200 hover:shadow-md hover:shadow-black/50 hover:bg-orange-600">submit</button>
+         </form>
+
+         <a href="index.html" class="ml-12 md:ml-24 group w-fit flex items-center space-x-2">
+            <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
+            <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
+         </a>
+         <div class="flex flex-col space-y-12 md:flex-row md:w-4/5 justify-around mt-8 mx-auto pl-12 md:pl-0">
+            <div>
+               <h3 class="capitalize mb-4 font-medium text-white text-2xl">links</h3>
+
+               <ul class="text-white mt-2 ml-8 font-light capitalize flex flex-col space-y-3">
+                  <a href="index.html"
+                     class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">home</a>
+
+                  <a href="about.html"
+                     class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">about</a>
+
+
+                  <a href="index.html"
+                     class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">contact
+                     us</a>
+
+               </ul>
+            </div>
+
+            <div class="text-white">
+
+               <p class="flex space-x-2 mb-4 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                  <span>+212 xxxxxxxxx</span>
+               </p>
+
+
+               <p class="flex space-x-2 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-6 h-6 stroke-white">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                     <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  <span>0000 st xxxx xxxx, xxxx</span>
+               </p>
+
+               <div class="flex space-x-4 mt-4">
+                  <img class="w-10 h-10 cursor-pointer" src="../assets/icons/facebook.png" alt="facebook">
+                  <img class="w-10 h-10 cursor-pointer" src="../assets/icons/instagram.png" alt="facebook">
+
+               </div>
+
+            </div>
+         </div>
+
+         <p class="bg-gray-900 mt-6 py-2 text-gray-300 text-center">© 2023 Pizza. All Rights Reserved by Pizza</p>
+
+      </footer>
+   </main>
+
+   <script src="../public//js/index.js"></script>
+</body>
+
+</html>
