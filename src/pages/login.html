@@ -10,13 +10,13 @@
    <title>Pizza Restaurant</title>
 </head>
 
-<body class="font-Josefin overflow-x-hidden w-full">
+<body class="font-Josefin">
 
    <!-- Header -->
-   <header class="font-Ysabeau relative w-screen bg-[#ffa231] pb-12 md:pb-0">
+   <header class="font-Ysabeau overflow-hidden relative">
 
       <!-- nav bar -->
-      <nav class="relative flex justify-between items-center px-8 py-4 ">
+      <nav class="relative bg-[#ffa231] flex justify-between items-center px-8 py-4 ">
          <a href="index.html" class="group w-fit flex items-center space-x-2">
             <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
             <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
@@ -35,7 +35,7 @@
          </svg>
 
          <ul id="links-menu"
-            class="absolute z-10 translate-x-full duration-500 right-0 top-full w-72 h-fit flex flex-col justify-around overflow-hidden rounded-l-lg bg-black text-white border border-r-0 border-white/20"
+            class="absolute z-10 translate-x-full duration-500 right-0 top-full w-72 h-fit  flex-col justify-around overflow-hidden rounded-l-lg bg-black text-white border border-r-0 border-white/20 invisible"
             role="navigation" aria-label="links">
             <!-- home -->
             <a href="index.html" aria-labelledby="home" class="link-item">
@@ -96,37 +96,38 @@
 
          </ul>
       </nav>
+
+      <div class="h-[440px] px-4">
+         <form class="w-full sm:w-[350px] border-b border-dashed pb-4 mx-auto mt-20">
+
+            <label for="email" class="text-lg capitalize">email :</label>
+            <br>
+            <input type="email" id="email" placeholder="example@mail.com"
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+
+            <br>
+            <label for="password" class="text-lg capitalize">password :</label>
+            <br>
+            <input type="password" id="password" placeholder="............."
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+            <button
+               class="ml-[calc(100%-176px)] sm:ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">log
+               in
+            </button>
+         </form>
+
+         <p class="w-full sm:w-[350px] text-gray-600 mt-4 mx-auto text-center sm:text-start">
+            If you don't have an account register <a href="signup.html"
+               class="text-teal-700 underline hover:text-teal-500 duration-200 cursor-pointer">here</a>.
+         </p>
+
+      </div>
    </header>
 
 
-   <main class="w-screen h-[440px] px-4">
-      <form class="w-full sm:w-[350px] border-b border-dashed pb-4 mx-auto mt-20">
-
-         <label for="email" class="text-lg capitalize">email :</label>
-         <br>
-         <input type="email" id="email" placeholder="example@mail.com"
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-
-         <br>
-         <label for="password" class="text-lg capitalize">password :</label>
-         <br>
-         <input type="password" id="password" placeholder="............."
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-         <button
-            class="ml-[calc(100%-176px)] sm:ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">log
-            in
-         </button>
-      </form>
-
-      <p class="w-full sm:w-[350px] text-gray-600 mt-4 mx-auto text-center sm:text-start">
-         If you don't have an account register <a href="signup.html" class="text-teal-700 underline hover:text-teal-500 duration-200 cursor-pointer">here</a>.
-      </p>
 
 
-
-   </main>
-
-   <footer class="w-screen bg-gray-900 text-center py-2 text-gray-300">
+   <footer class="bg-gray-900 text-center py-2 text-gray-300">
       © 2023 Pizza. All Rights Reserved by Pizza
    </footer>
 

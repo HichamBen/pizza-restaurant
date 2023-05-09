@@ -10,13 +10,13 @@
    <title>Pizza Restaurant</title>
 </head>
 
-<body class="font-Josefin overflow-x-hidden w-full">
+<body class="font-Josefin">
 
    <!-- Header -->
-   <header class="font-Ysabeau relative w-screen bg-[#ffa231] pb-12 md:pb-0">
+   <header class="font-Ysabeau overflow-hidden relative">
 
       <!-- nav bar -->
-      <nav class="relative flex justify-between items-center px-8 py-4 ">
+      <nav class="relative bg-[#ffa231] flex justify-between items-center px-8 py-4 ">
          <a href="index.html" class="group w-fit flex items-center space-x-2">
             <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
             <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
@@ -96,54 +96,52 @@
 
          </ul>
       </nav>
+
+      <div class="h-[500px] px-4">
+         <form class="w-full sm:w-[350px] border-b border-dashed pb-4 mx-auto mt-8">
+            <label for="name" class="text-lg capitalize">username :</label>
+            <br>
+            <input type="text" id="name" placeholder="Name"
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+            <br>
+            <label for="email" class="text-lg capitalize">email :</label>
+            <br>
+            <input type="email" id="email" placeholder="example@mail.com"
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+
+            <br>
+            <label for="password" class="text-lg capitalize">password :</label>
+            <br>
+            <input type="password" id="password" placeholder="............."
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+
+            <br>
+            <label for="confirm" class="text-lg capitalize">confirm password :</label>
+            <br>
+            <input type="password" id="confirm" placeholder=".............."
+               class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
+
+            <button
+               class="ml-[calc(100%-176px)] sm:ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">sign
+               up</button>
+         </form>
+
+         <div class="flex w-full sm:w-[350px] mt-4 mx-auto justify-between">
+            <button
+               class="border-red-400 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-red-300 duration-200">
+               <img src="../assets/icons/google.png" alt="google" class="w-6 h-6">
+               <span class="text-red-600 capitalize text-lg">google</span>
+            </button>
+            <button
+               class="border-sky-600 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-sky-300 duration-200">
+               <img src="../assets/icons/facebook.png" alt="google" class="w-6 h-6">
+               <span class="text-sky-600 capitalize text-lg">facebook</span>
+            </button>
+         </div>
+      </div>
    </header>
 
-
-   <main class="w-screen h-[500px] px-4">
-      <form class="w-full sm:w-[350px] border-b border-dashed pb-4 mx-auto mt-8">
-         <label for="name" class="text-lg capitalize">username :</label>
-         <br>
-         <input type="text" id="name" placeholder="Name"
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-         <br>
-         <label for="email" class="text-lg capitalize">email :</label>
-         <br>
-         <input type="email" id="email" placeholder="example@mail.com"
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-
-         <br>
-         <label for="password" class="text-lg capitalize">password :</label>
-         <br>
-         <input type="password" id="password" placeholder="............."
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-
-         <br>
-         <label for="confirm" class="text-lg capitalize">confirm password :</label>
-         <br>
-         <input type="password" id="confirm" placeholder=".............."
-            class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
-
-         <button
-            class="ml-[calc(100%-176px)] sm:ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">sign
-            up</button>
-      </form>
-
-      <div class="flex w-full sm:w-[350px] mt-4 mx-auto justify-between">
-         <button class="border-red-400 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-red-300 duration-200">
-            <img src="../assets/icons/google.png" alt="google" class="w-6 h-6">
-            <span class="text-red-600 capitalize text-lg">google</span>
-         </button>
-         <button class="border-sky-600 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-sky-300 duration-200">
-            <img src="../assets/icons/facebook.png" alt="google" class="w-6 h-6">
-            <span class="text-sky-600 capitalize text-lg">facebook</span>
-         </button>
-      </div>
-
-
-
-   </main>
-
-   <footer class="w-screen bg-gray-900 text-center py-2 text-gray-300">
+   <footer class="bg-gray-900 text-center py-2 text-gray-300">
       © 2023 Pizza. All Rights Reserved by Pizza
    </footer>
 
