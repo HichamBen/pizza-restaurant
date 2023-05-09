@@ -98,18 +98,18 @@
       </nav>
    </header>
 
-   <main class="w-full gap-x-8 grid grid-cols-2 justify-center p-12">
-      <div>
-         <div class="flex w-full mb-8">
-            <img class="w-64 object-cover object-center" src="../assets/imgs/greek-pizza.jpg" alt="thick-crusts-pizza">
+   <main class="w-full gap-x-6 grid md:grid-cols-5 justify-center p-4 md:p-12">
+      <div class="md:col-span-3">
+         <div class="flex flex-col sm:flex-row w-full mb-8">
+            <img class="w-full sm:w-1/2 object-cover object-center" src="../assets/imgs/greek-pizza.jpg"
+               alt="thick-crusts-pizza">
 
-            <div class="border py-4 pl-6 pr-4 w-96">
+            <div class="border py-4 px-2 md:pl-6 md:pr-4 w-full sm:w-1/2">
                <h1 class="text-xl capitalize">greek pizza</h1>
 
                <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
                   <label for="item">items:</label>
-                  <input type="number" value="2"
-                     class="mx-auto outline-none border rounded-lg w-12 text-center">
+                  <input type="number" value="2" class="mx-auto outline-none border rounded-lg w-12 text-center">
                   <span class="justify-self-end">$21.00</span>
                </div>
 
@@ -128,23 +128,23 @@
                </div>
 
                <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
-                  <h3 class="text-xl font-bold text-teal-900">total:</h3>
-                  <p class="text-3xl font-extrabold">$22.50</p>
+                  <h3 class="text-lg font-bold text-teal-900">total:</h3>
+                  <p class="text-2xl md:text-3xl md:font-extrabold font-bold">$22.50</p>
                </div>
             </div>
          </div>
 
-         <div class="flex w-full">
-            <img class="w-64 object-cover object-center" src="../assets/imgs/thick-crusts-pizza.jpg"
-               alt="thick-crusts-pizza">
+         <div class="flex flex-col sm:flex-row w-full mb-8">
 
-            <div class="border py-4 pl-6 pr-4 w-96">
+            <img class="w-full sm:w-1/2 object-cover object-center" src="../assets/imgs/thick-crusts-pizza.jpg"
+               alt="thick-crusts-pizza" />
+
+            <div class="border py-4 px-2 md:pl-6 md:pr-4 w-full sm:w-1/2">
                <h1 class="text-xl capitalize">thick crusts pizza</h1>
 
                <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
                   <label for="item">items:</label>
-                  <input type="number" value="1"
-                     class="mx-auto outline-none border rounded-lg w-12 text-center">
+                  <input type="number" value="1" class="mx-auto outline-none border rounded-lg w-12 text-center">
                   <span class="justify-self-end">$12.50</span>
                </div>
 
@@ -163,23 +163,23 @@
                </div>
 
                <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
-                  <h3 class="text-xl font-bold text-teal-900">total:</h3>
-                  <p class="text-3xl font-extrabold">$14.50</p>
+                  <h3 class="text-lg font-bold text-teal-900">total:</h3>
+                  <p class="text-2xl md:text-3xl md:font-extrabold font-bold">$14.50</p>
                </div>
             </div>
          </div>
       </div>
 
-      <div class="border w-4/5 h-fit justify-self-end p-4">
+      <div class="md:col-span-2 border w-full h-fit p-4">
          <div class="text-lg capitalize flex justify-between mt-4 items-center">
-            <h3 class="text-2xl">greek pizza</h3>
-            <p class="text-2xl">$22.50</p>
+            <h3 class="text-xl">greek pizza</h3>
+            <p class="text-xl">$22.50</p>
          </div>
 
          <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
-            <h3 class="text-2xl">thick crusts pizza
+            <h3 class="text-xl">thick crusts pizza
             </h3>
-            <p class="text-2xl">$14.50</p>
+            <p class="text-xl">$14.50</p>
          </div>
 
          <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
@@ -187,7 +187,8 @@
             <p class="text-3xl font-extrabold">$37.00</p>
          </div>
 
-         <button class="text-xl hover:bg-teal-600 duration-200 mt-4 bg-teal-700 text-white p-2 uppercase rounded w-full">
+         <button
+            class="text-xl hover:bg-teal-600 duration-200 mt-4 bg-teal-700 text-white p-2 uppercase rounded w-full">
             buy
          </button>
       </div>

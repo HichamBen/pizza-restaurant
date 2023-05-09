@@ -99,8 +99,8 @@
    </header>
 
 
-   <main class="w-screen h-[500px]">
-      <form class="w-[350px] border-b border-dashed pb-4 mx-auto mt-8">
+   <main class="w-screen h-[500px] px-4">
+      <form class="w-full sm:w-[350px] border-b border-dashed pb-4 mx-auto mt-8">
          <label for="name" class="text-lg capitalize">username :</label>
          <br>
          <input type="text" id="name" placeholder="Name"
@@ -124,18 +124,18 @@
             class="outline-orange-500 border rounded-md py-1 px-4 w-full mb-4">
 
          <button
-            class="ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">sign
+            class="ml-[calc(100%-176px)] sm:ml-[174px] bg-teal-700 py-2 px-4 w-44 text-white rounded-md text-lg capitalize hover:bg-teal-600 duration-200">sign
             up</button>
       </form>
 
-      <div class="flex w-[350px] mt-4 mx-auto justify-between">
-         <button class="border-red-400 py-1 border w-36 flex items-start justify-center space-x-4 rounded-lg hover:border-red-300 duration-200">
+      <div class="flex w-full sm:w-[350px] mt-4 mx-auto justify-between">
+         <button class="border-red-400 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-red-300 duration-200">
             <img src="../assets/icons/google.png" alt="google" class="w-6 h-6">
-            <span class="text-red-600 capitalize text-xl">google</span>
+            <span class="text-red-600 capitalize text-lg">google</span>
          </button>
-         <button class="border-sky-600 py-1 border w-36 flex items-start justify-center space-x-4 rounded-lg hover:border-sky-300 duration-200">
+         <button class="border-sky-600 py-1 border w-32 sm:w-36 flex items-start justify-center space-x-2 rounded-lg hover:border-sky-300 duration-200">
             <img src="../assets/icons/facebook.png" alt="google" class="w-6 h-6">
-            <span class="text-sky-600 capitalize text-xl">facebook</span>
+            <span class="text-sky-600 capitalize text-lg">facebook</span>
          </button>
       </div>
 
