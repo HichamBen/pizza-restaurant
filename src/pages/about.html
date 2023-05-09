@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../assets/icons/pizza.png" type="image/x-icon">
+   <link rel="stylesheet" href="../public/styles.css">
+   <title>Pizza Restaurant</title>
+</head>
+
+<body class="font-Josefin overflow-x-hidden w-full">
+
+   <!-- Header -->
+   <header class="font-Ysabeau overflow-hidden relative w-screen h-[590px] bg-gradient-to-br from-black/20 to-black/80">
+
+      <img class="fixed -z-10 w-full h-full object-cover object-center top-0 left-0" src="../assets/bg/pizza1.jpg"
+         alt="background">
+      <!-- nav bar -->
+      <nav class="relative flex justify-between items-center px-8 pt-4 ">
+         <a href="index.html" class="group w-fit flex items-center space-x-2">
+            <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
+            <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
+         </a>
+
+         <svg id="burger-menu" role="button" aria-label="open links menu" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-12 h-12 rotate-180 fill-none stroke-white hover:stroke-white/60 duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+         </svg>
+
+         <svg id="close-menu" class="hidden w-12 h-12 fill-none stroke-white hover:stroke-white/60 duration-300"
+            role="button" aria-label="close links menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+         </svg>
+
+         <ul id="links-menu"
+            class="absolute z-10 translate-x-full duration-500 right-0 top-full w-72 h-fit flex flex-col justify-around overflow-hidden rounded-l-lg bg-black text-white border border-r-0 border-white/20"
+            role="navigation" aria-label="links">
+            <!-- home -->
+            <a href="index.html" aria-labelledby="home" class="link-item">
+               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+               </svg>
+               <span id="home">home</span>
+            </a>
+
+            <!-- shoping cart -->
+            <a href="cart.html" aria-labelledby="home" class="link-item">
+
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+               </svg>
+
+               <span id="home">cart</span>
+            </a>
+
+            <!-- about -->
+            <a href="about.html" aria-labelledby="about" class="link-item bg-[#ffa231]">
+               <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+               </svg>
+               <span id="about">about</span>
+            </a>
+
+            <!-- contact -->
+            <a href="contact.html" aria-labelledby="contact" class="link-item">
+               <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+               </svg>
+               <span id="contact">contact us</span>
+            </a>
+
+            <div class="flex w-full my-3 space-x-4 px-8">
+               <!-- Login -->
+               <a href="login.html" aria-labelledby="home"
+                  class="text-lg text-center py-1 capitalize rounded-lg w-24 shrink-0 border hover:bg-orange-500 duration-200 hover:border-black">
+                  log in
+               </a>
+               <!-- Signup -->
+               <a href="signup.html" aria-labelledby="home"
+                  class="text-lg text-center py-1 capitalize rounded-lg w-24 shrink-0 bg-orange-800 border border-black hover:bg-gray-800 duration-200 hover:border-white">
+                  sign up
+               </a>
+            </div>
+         </ul>
+      </nav>
+
+
+      <!-- Presentations -->
+      <section aria-labelledby="title" class="relative md:w-96 h-fit mt-20 ml-12 md:ml-24">
+         <h1 id="title" class="text-green-600 font-bold text-6xl italic capitalize">about</h1>
+         <p class="text-white font-medium mt-4 text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Molestias, repellendus rem. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur placeat facilis voluptates.</p>
+      </section>
+
+      <svg role="img" aria-label="background" class="w-full h-[139px] rotate-180 absolute -bottom-12 left-0"
+         xmlns="http://www.w3.org/2000/svg">
+         <defs>
+            <path id="a" d="M0 0h1440v139H0z" />
+         </defs>
+         <g fill="none" fill-rule="evenodd">
+            <mask id="b" fill="white">
+               <use xlink:href="#a" />
+            </mask>
+            <g mask="url(#b)">
+               <path
+                  d="M0-574.4c152.937-85.68 298.933-101.818 437.988-48.413 208.583 80.107 457.536 53.405 594.167 0 136.63-53.405 140.541-118.522 407.845-48.963 267.304 69.56 0 698.192 0 698.192s-211.887 128.179-591.858 64.09C594.828 47.779 312.114 63.996 0 139.156V-574.4z"
+                  fill="white" />
+               <path d="M750-537h560V23H750z" />
+            </g>
+         </g>
+      </svg>
+   </header>
+
+
+   <main class="bg-white w-screen pb-44">
+      <h1 class="ml-24 pt-12 capitalize text-4xl font-bold">our achievements</h1>
+      <section
+         class="text-white w-full gap-8 place-items-start grid md:grid-cols-2 lg:grid-cols-3 place-content-center px-8 md:px-24 py-12">
+
+         <div class="rounded-lg p-8 w-full bg-black/90 shadow-xl shadow-black">
+            <div class="flex items-center justify-center space-x-4">
+               <img src="../assets/icons/restaurant-waiter.svg" alt="restaurant-waiter" />
+               <h3 class="text-2xl capitalize">restaurants</h3>
+            </div>
+            <p class="py-4 text-center text-3xl font-bold">25</p>
+         </div>
+
+         <div class="rounded-lg p-8 w-full bg-black/90 shadow-xl shadow-black">
+
+            <div class="flex items-center justify-center space-x-4">
+               <img src="../assets/icons/users.svg" alt="restaurant-waiter" />
+               <h3 class="text-2xl capitalize">client happies</h3>
+            </div>
+            <p class="py-4 text-center text-3xl font-bold">1590</p>
+         </div>
+
+         <div class="rounded-lg p-8 w-full bg-black/90 shadow-xl shadow-black">
+
+            <div class="flex items-center justify-center space-x-4">
+               <img src="../assets/icons/delivery.svg" alt="restaurant-waiter" />
+               <h3 class="text-2xl capitalize">delivered</h3>
+            </div>
+            <p class="py-4 text-center text-3xl font-bold">20500</p>
+         </div>
+      </section>
+   </main>
+
+
+   <footer class="w-screen relative bg-black pt-24">
+
+      <form
+         class="absolute bg-gradient-to-tl from-[#ffa231] to-orange-800 p-4 rounded-lg w-11/12 md:w-[400px] h-36 top-0 left-1/2 -translate-y-1/2 -translate-x-1/2">
+         <label for="email" class="text-white font-medium text-2xl capitalize">recieve <br /> our offers!</label>
+         <input type="text" id="email" placeholder="example@mail.com"
+            class="outline-none shadow-lg shadow-black/50 w-[70%] md:w-[78%] rounded-lg mt-3 py-1 px-4 border-2 border-transparent focus:border-[#ffa231]" />
+         <button
+            class="capitalize text-white py-1 px-3 rounded-lg w-fit text-center bg-orange-700 shadow-lg shadow-black/50 hover:duration-200 hover:shadow-md hover:shadow-black/50 hover:bg-orange-600">submit</button>
+      </form>
+
+      <a href="index.html" class="ml-12 md:ml-24 group w-fit flex items-center space-x-2">
+         <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
+         <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
+      </a>
+      <div class="flex flex-col space-y-12 md:flex-row md:w-4/5 justify-around mt-8 mx-auto pl-12 md:pl-0">
+         <div>
+            <h3 class="capitalize mb-4 font-medium text-white text-2xl">links</h3>
+
+            <ul class="text-white mt-2 ml-8 font-light capitalize flex flex-col space-y-3">
+               <a href="index.html"
+                  class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">home</a>
+
+               <a href="about.html"
+                  class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">about</a>
+
+
+               <a href="index.html"
+                  class="hover:text-[#ffa231] duration-200 after:hover:border-l-[#ffa231] after:duration-200  after:hover:translate-x-0 relative after:absolute after:border-l-white after:border-transparent after:border-[6px] after:top-1/2 after:-translate-y-1/2 after:-left-4 after:-translate-x-4">contact
+                  us</a>
+
+            </ul>
+         </div>
+
+         <div class="text-white">
+
+            <p class="flex space-x-2 mb-4 items-center">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+               </svg>
+               <span>+212 xxxxxxxxx</span>
+            </p>
+
+
+            <p class="flex space-x-2 items-center">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6 stroke-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+               </svg>
+               <span>0000 st xxxx xxxx, xxxx</span>
+            </p>
+
+            <div class="flex space-x-4 mt-4">
+               <img class="w-10 h-10 cursor-pointer" src="../assets/icons/facebook.png" alt="facebook">
+               <img class="w-10 h-10 cursor-pointer" src="../assets/icons/instagram.png" alt="facebook">
+
+            </div>
+
+         </div>
+      </div>
+
+      <p class="bg-gray-900 mt-6 py-2 text-gray-300 text-center">© 2023 Pizza. All Rights Reserved by Pizza</p>
+
+   </footer>
+
+
+   <script src="../public//js/index.js"></script>
+
+</body>
+
+</html>

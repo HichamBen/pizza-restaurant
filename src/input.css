@@ -6,7 +6,7 @@
 
 @layer components {
   .link-item {
-    @apply cursor-pointer flex space-x-4 text-xl items-center px-8 py-2 hover:bg-[#ffa231] transition-colors duration-200 capitalize;
+    @apply cursor-pointer flex space-x-4 text-xl items-start px-8 py-2 hover:bg-[#ffa231] transition-colors duration-200 capitalize;
   }
 }
 

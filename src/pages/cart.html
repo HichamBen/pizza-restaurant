@@ -13,10 +13,10 @@
 <body class="font-Josefin overflow-x-hidden w-full">
 
    <!-- Header -->
-   <header class="font-Ysabeau overflow-hidden relative w-screen h-fit md:h-[660px] bg-[#ffa231] pb-12 md:pb-0">
+   <header class="font-Ysabeau relative w-screen bg-[#ffa231] pb-12 md:pb-0">
 
       <!-- nav bar -->
-      <nav class="relative flex justify-between items-center px-8 pt-4 ">
+      <nav class="relative flex justify-between items-center px-8 py-4 ">
          <a href="index.html" class="group w-fit flex items-center space-x-2">
             <img src="../assets/icons/pizza.png" alt="brand" class="w-12 h-12 object-cover object-center">
             <span class="text-xl text-white group-hover:text-orange-500 duration-200">Pizza</span>
@@ -48,7 +48,7 @@
             </a>
 
             <!-- shoping cart -->
-            <a href="cart.html" aria-labelledby="home" class="link-item">
+            <a href="cart.html" aria-labelledby="home" class="link-item bg-[#ffa231]">
 
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="w-6 h-6">
@@ -70,7 +70,7 @@
             </a>
 
             <!-- contact -->
-            <a href="contact.html" aria-labelledby="contact" class="link-item bg-[#ffa231]">
+            <a href="contact.html" aria-labelledby="contact" class="link-item">
                <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                   stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -96,42 +96,105 @@
 
          </ul>
       </nav>
+   </header>
 
+   <main class="w-full gap-x-8 grid grid-cols-2 justify-center p-12">
+      <div>
+         <div class="flex w-full mb-8">
+            <img class="w-64 object-cover object-center" src="../assets/imgs/greek-pizza.jpg" alt="thick-crusts-pizza">
 
-      <!-- Presentations -->
-      <div class="grid place-content-center md:grid-cols-2 w-full h-fit mt-20 ml-12 md:ml-24">
+            <div class="border py-4 pl-6 pr-4 w-96">
+               <h1 class="text-xl capitalize">greek pizza</h1>
 
-         <h1 id="title" class="w-80 mb-10 pt-12 text-green-600 font-bold text-6xl italic capitalize">
-            contact us</h1>
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <label for="item">items:</label>
+                  <input type="number" value="2"
+                     class="mx-auto outline-none border rounded-lg w-12 text-center">
+                  <span class="justify-self-end">$21.00</span>
+               </div>
 
-         <form
-            class="text-white capitalize text-lg p-4 shrink-0 w-96 bg-gradient-to-br from-black/50 to-orange-600/80 rounded-lg">
-            <label for="email">email:</label>
-            <br />
-            <input type="email" placeholder="example@mail.com"
-               class="outline-orange-800 mb-4 w-full rounded-md p-2 placeholder:font-light text-black">
-            <br />
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <p>chips:</p>
+                  <button
+                     class="text-4xl mx-auto grid place-content-center text-white bg-teal-700 w-9 h-9 rounded-full hover:bg-teal-600 duration-200">+</button>
+                  <span class="justify-self-end">$1.00</span>
+               </div>
 
-            <label for="tel">phone:</label>
-            <br />
-            <input type="tel" placeholder="Phone number"
-               class="outline-orange-800 mb-4 w-full rounded-md p-2 placeholder:font-light text-black">
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <p>coke:</p>
+                  <button
+                     class="text-4xl mx-auto grid place-content-center text-white bg-teal-700 w-9 h-9 rounded-full hover:bg-teal-600 duration-200">+</button>
+                  <span class="justify-self-end">$1.50</span>
+               </div>
 
-            <select id="services" class="mb-4 w-full text-black p-2 rounded-md bg-white">
-               <option value="default" class="pt-2">Choose a service</option>
-               <option value="custom-offer">Custom Offer</option>
-               <option value="joining">Joining our Team</option>
-               <option value="investment">Investment</option>
-            </select>
+               <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
+                  <h3 class="text-xl font-bold text-teal-900">total:</h3>
+                  <p class="text-3xl font-extrabold">$22.50</p>
+               </div>
+            </div>
+         </div>
 
-            <textarea rows="3" placeholder="message..." class="outline-orange-800 mb-4 resize-none w-full rounded-md p-2"></textarea>
+         <div class="flex w-full">
+            <img class="w-64 object-cover object-center" src="../assets/imgs/thick-crusts-pizza.jpg"
+               alt="thick-crusts-pizza">
 
-            <button
-               class="float-right bg-orange-800 py-1 px-4 rounded-md capitalize hover:bg-black/70 duration-200">submit</button>
-         </form>
+            <div class="border py-4 pl-6 pr-4 w-96">
+               <h1 class="text-xl capitalize">thick crusts pizza</h1>
+
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <label for="item">items:</label>
+                  <input type="number" value="1"
+                     class="mx-auto outline-none border rounded-lg w-12 text-center">
+                  <span class="justify-self-end">$12.50</span>
+               </div>
+
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <p>chips:</p>
+                  <button
+                     class="text-4xl mx-auto grid place-content-center text-white bg-teal-700 w-9 h-9 rounded-full hover:bg-teal-600 duration-200">+</button>
+                  <span class="justify-self-end">$1.00</span>
+               </div>
+
+               <div class="text-lg capitalize grid grid-cols-3 mt-4 items-center">
+                  <p>coke:</p>
+                  <button
+                     class="text-4xl mx-auto grid place-content-center text-white bg-teal-700 w-9 h-9 rounded-full hover:bg-teal-600 duration-200">+</button>
+                  <span class="justify-self-end">$1.50</span>
+               </div>
+
+               <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
+                  <h3 class="text-xl font-bold text-teal-900">total:</h3>
+                  <p class="text-3xl font-extrabold">$14.50</p>
+               </div>
+            </div>
+         </div>
       </div>
 
-   </header>
+      <div class="border w-4/5 h-fit justify-self-end p-4">
+         <div class="text-lg capitalize flex justify-between mt-4 items-center">
+            <h3 class="text-2xl">greek pizza</h3>
+            <p class="text-2xl">$22.50</p>
+         </div>
+
+         <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
+            <h3 class="text-2xl">thick crusts pizza
+            </h3>
+            <p class="text-2xl">$14.50</p>
+         </div>
+
+         <div class="text-lg border-t pt-2 capitalize flex justify-between mt-4 items-center">
+            <h3 class="text-xl font-bold text-teal-900">total:</h3>
+            <p class="text-3xl font-extrabold">$37.00</p>
+         </div>
+
+         <button class="text-xl hover:bg-teal-600 duration-200 mt-4 bg-teal-700 text-white p-2 uppercase rounded w-full">
+            buy
+         </button>
+      </div>
+
+
+   </main>
+
 
    <footer class="w-screen bg-black pt-10">
       <a href="index.html" class="ml-12 md:ml-24 group w-fit flex items-center space-x-2">
